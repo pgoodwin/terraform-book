@@ -1,4 +1,6 @@
 .envrc
-.terraform/
-plan
+.terraform
 terraform.tfstate
+*.tfstate
+*.tfstate.backup
+plan
