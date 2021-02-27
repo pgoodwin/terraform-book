@@ -1,4 +1,14 @@
 # Preamble
+terraform {
+  backend "s3" {
+    bucket = "terraform-book-pgoodwin"
+    key    = "global/s3/web-server-example/terraform.tfstate"
+    region = "us-east-2"
+
+    dynamodb_table = "terraform-up-and-running-locks"
+    encrypt        = "true"
+  }
+}
 provider "aws" {
   region = "us-east-2"
 }
